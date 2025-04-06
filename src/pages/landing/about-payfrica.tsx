@@ -1,13 +1,50 @@
 import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface FeaturesProps {
   globeImageUrl?: string;
 }
 
 export default function AboutPayfrica({ globeImageUrl = "" }: FeaturesProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(containerRef, { once: true, amount: 0.3 });
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4, delay: 0.2 },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4, delay: 0.2 },
+    },
+  };
+
   return (
-    <div className="bg-[#FCF5D7] h-[1079px] w-full overflow-x-hidden">
-      <header className="flex flex-col gap-[24px] items-center justify-center mt-24">
+    <div className="bg-[#FCF5D7] py-6 w-full overflow-x-hidden">
+      <motion.header
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={headerVariants}
+        className="flex flex-col gap-[24px] items-center justify-center mt-24"
+      >
         <h2 className="tracking-tight md:text-[57.22px] text-[28px] md:font-[700] text-center font-[500] text-[#3C53A4]">
           The Future of Finance is Here
         </h2>
@@ -15,9 +52,18 @@ export default function AboutPayfrica({ globeImageUrl = "" }: FeaturesProps) {
           Crypto or cash, <span className="text-[#C43E26]">Payfrica</span> makes
           financial transactions effortless across Africa.
         </p>
-      </header>
-      <div className="md:flex-row flex-col flex justify-center items-center max-w-7xl mx-auto p-3 md:h-[539px] md:mt-[10rem] mt-[5rem]">
-        <div className="w-[498px] h-[378.96px] flex flex-col justify-between">
+      </motion.header>
+
+      <div
+        ref={containerRef}
+        className="md:flex-row flex-col flex justify-center items-center max-w-7xl mx-auto p-3 md:h-[539px] md:mt-[10rem] mt-[5rem]"
+      >
+        <motion.div
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={contentVariants}
+          className="md:w-[498px] h-[378.96px] flex flex-col justify-between"
+        >
           <div className="bg-[#FBE19A] text-[#3C53A4] gap-[10px] rounded-[8px] p-[8px] w-fit">
             Payfrica Pay
           </div>
@@ -25,7 +71,7 @@ export default function AboutPayfrica({ globeImageUrl = "" }: FeaturesProps) {
             Transactions Beyond Barriers
           </h2>
           <p className="font-[400] text-[18.75px]">
-            make fast, secure transactions in your local currency, even with
+            Make fast, secure transactions in your local currency, even with
             limited connectivity.{" "}
             <span className="text-[#C63B25] font-[700] text-[18.78px]">
               Payfrica Pay
@@ -35,10 +81,20 @@ export default function AboutPayfrica({ globeImageUrl = "" }: FeaturesProps) {
           <Button className="bg-[#C63B25] w-[105.95574951171875px] h-[58.955753326416016px] rounded-[9.24px] p-[18.48px]">
             Explore
           </Button>
-        </div>
-        <div className="w-[609px] h-[525px]">
-          <img src={globeImageUrl} className="w-full h-full" />
-        </div>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={imageVariants}
+          className="md:w-[609px] md:h-[525px]"
+        >
+          <img
+            src={globeImageUrl}
+            alt="Globe visualization"
+            className="w-full h-full object-contain"
+          />
+        </motion.div>
       </div>
     </div>
   );
