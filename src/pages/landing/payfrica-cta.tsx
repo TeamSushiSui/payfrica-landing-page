@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -55,7 +57,7 @@ const PayFricaCTA = () => {
   };
 
   return (
-    <div className="w-screen bg-white py-2 px-4 mt-20">
+    <div className="w-full bg-white py-2 px-4 mt-20">
       <motion.div
         ref={containerRef}
         initial="hidden"
@@ -100,8 +102,8 @@ const PayFricaCTA = () => {
                 <motion.div className="z-30 md:absolute md:top-0 mt-9 md:-mt-[7rem]">
                   <img
                     src="/src/assets/2 Phones.png"
-                    alt="Payfrica App Screenshot 1"
-                    className="w-[766px] h-auto"
+                    alt="Payfrica App Screenshot"
+                    className="w-full max-w-[766px] h-auto"
                   />
                 </motion.div>
               </div>

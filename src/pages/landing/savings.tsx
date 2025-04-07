@@ -54,7 +54,7 @@ const PayfricaSavings = () => {
 
   return (
     <div className="bg-[#FCF5D7] py-16 sm:py-24" ref={containerRef}>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <motion.div
             className="md:w-1/2 text-center md:text-left"
@@ -63,12 +63,10 @@ const PayfricaSavings = () => {
             variants={contentVariants}
           >
             <motion.div
-              className="inline-block px-4 py-2 bg-[#FBE19A] rounded-full mb-6"
+              className="bg-[#FBE19A] text-[#3C53A4] rounded-3xl md:mx-0 mx-auto px-4 py-2 w-fit mb-3"
               variants={itemVariants}
             >
-              <span className="text-[#3C53A4] text-sm">
-                Payfrica Saving Circle
-              </span>
+              Payfrica Saving Circle
             </motion.div>
 
             <motion.h2
@@ -117,11 +115,7 @@ const PayfricaSavings = () => {
                 variants={floatingBlobVariants}
               ></motion.div>
 
-              <motion.div
-                className="relative z-10 rounded-3xl p-4 border-4 border-[#C43E26]"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <motion.div className="relative z-10 rounded-3xl">
                 <img
                   src="/src/assets/piggy-bank.png"
                   alt="Piggy Bank Savings"

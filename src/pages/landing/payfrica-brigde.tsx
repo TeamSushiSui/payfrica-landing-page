@@ -43,7 +43,7 @@ const PayfricaBridge = () => {
 
   return (
     <div className="bg-[#3C53A4] py-16 sm:py-24" ref={containerRef}>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 ">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <motion.div
             className="md:w-1/2 relative"
@@ -51,13 +51,11 @@ const PayfricaBridge = () => {
             animate={isInView ? "visible" : "hidden"}
             variants={imageVariants}
           >
-            <div className="relative w-full max-w-[500px] mx-auto">
+            <div className="relative w-full">
               <motion.img
                 src="/src/assets/mobile-image.png"
                 alt="Mobile App Interface"
-                className="relative z-10 rounded-3xl transform hover:scale-105 transition-transform duration-300"
-                whileHover={{ scale: 1.05, rotate: -2 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="relative z-10 rounded-3xl transition-transform duration-300"
               />
             </div>
           </motion.div>
@@ -70,9 +68,9 @@ const PayfricaBridge = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="inline-block px-4 py-2 bg-[#FCF5D7] text-[#3C53A4] rounded-full mb-6"
+              className="bg-[#FBE19A] text-[#3C53A4] rounded-3xl px-4 py-2 mx-auto md:mx-0 w-fit mb-3"
             >
-              <span className="text-sm">Payfrica Bridge</span>
+              Payfrica Bridge
             </motion.div>
 
             <motion.h2

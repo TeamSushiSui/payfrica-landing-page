@@ -114,7 +114,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-16 flex flex-col md:flex-row items-center">
         <div
           ref={containerRef}
-          className="md:w-1/2 z-10 md:mt-[150px] text-center md:text-left"
+          className="md:w-1/2 z-10 md:mt-[60px] text-center md:text-left"
         >
           <h1 className="text-white h1 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6">
             Bridging The Gap, Empowering Transactions
@@ -152,7 +152,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="md:w-1/2 mt-8 px-4 sm:px-8 md:px-0 absolute right-0 md:-mr-[4rem] md:mt-[10rem]">
+        <div className="md:w-1/2 mt-8 px-4 sm:px-8 md:px-0 absolute right-0 md:-mr-[4rem] md:mt-[14rem]">
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.4 } }}

@@ -6,7 +6,9 @@ interface FeaturesProps {
   globeImageUrl?: string;
 }
 
-export default function AboutPayfrica({ globeImageUrl = "" }: FeaturesProps) {
+export default function AboutPayfrica({
+  globeImageUrl = "/placeholder.svg?height=525&width=609",
+}: FeaturesProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(containerRef, { once: true, amount: 0.3 });
 
@@ -38,63 +40,65 @@ export default function AboutPayfrica({ globeImageUrl = "" }: FeaturesProps) {
   };
 
   return (
-    <div className="bg-[#FCF5D7] py-6 w-full overflow-x-hidden">
-      <motion.header
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={headerVariants}
-        className="flex flex-col gap-[24px] items-center justify-center mt-24"
-      >
-        <h2 className="tracking-tight md:text-[57.22px] text-[28px] md:font-[700] text-center font-[500] text-[#3C53A4]">
-          The Future of Finance is Here
-        </h2>
-        <p className="md:text-[25px] text-[16px] font-[500] text-center text-[#3C53A4]">
-          Crypto or cash, <span className="text-[#C43E26]">Payfrica</span> makes
-          financial transactions effortless across Africa.
-        </p>
-      </motion.header>
-
-      <div
-        ref={containerRef}
-        className="md:flex-row flex-col flex justify-center items-center max-w-7xl mx-auto p-3 md:h-[539px] md:mt-[10rem] mt-[5rem]"
-      >
-        <motion.div
+    <div className="bg-[#FCF5D7] py-16 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4">
+        <motion.header
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          variants={contentVariants}
-          className="md:w-[498px] h-[378.96px] flex flex-col justify-between"
+          variants={headerVariants}
+          className="flex flex-col gap-6 items-center justify-center mb-24"
         >
-          <div className="bg-[#FBE19A] text-[#3C53A4] gap-[10px] rounded-[8px] p-[8px] w-fit">
-            Payfrica Pay
-          </div>
-          <h2 className="font-[500] text-[45.78px]">
-            Transactions Beyond Barriers
+          <h2 className="tracking-tight text-3xl md:text-5xl lg:text-[57.22px] font-bold text-center text-[#3C53A4]">
+            The Future of Finance is Here
           </h2>
-          <p className="font-[400] text-[18.75px]">
-            Make fast, secure transactions in your local currency, even with
-            limited connectivity.{" "}
-            <span className="text-[#C63B25] font-[700] text-[18.78px]">
-              Payfrica Pay
-            </span>{" "}
-            is your gateway to seamless financial interactions
+          <p className="text-base md:text-xl lg:text-[25px] font-medium text-center text-[#3C53A4] max-w-3xl">
+            Crypto or cash, <span className="text-[#C43E26]">Payfrica</span>{" "}
+            makes financial transactions effortless across Africa.
           </p>
-          <Button className="bg-[#C63B25] w-[105.95574951171875px] h-[58.955753326416016px] rounded-[9.24px] p-[18.48px]">
-            Explore
-          </Button>
-        </motion.div>
+        </motion.header>
 
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={imageVariants}
-          className="md:w-[609px] md:h-[525px]"
+        <div
+          ref={containerRef}
+          className="flex flex-col md:flex-row items-center justify-between gap-12 py-12"
         >
-          <img
-            src={globeImageUrl}
-            alt="Globe visualization"
-            className="w-full h-full object-contain"
-          />
-        </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={contentVariants}
+            className="flex flex-col gap-6 md:w-1/2"
+          >
+            <div className="bg-[#FBE19A] text-[#3C53A4] rounded-3xl px-4 py-2 w-fit">
+              Payfrica Pay
+            </div>
+            <h2 className="font-medium text-3xl md:text-4xl lg:text-[45.78px] text-[#3C53A4]">
+              Transactions Beyond Barriers
+            </h2>
+            <p className="font-normal text-base md:text-lg lg:text-[18.75px] text-[#3C53A4]">
+              Make fast, secure transactions in your local currency, even with
+              limited connectivity.{" "}
+              <span className="text-[#C63B25] font-bold">Payfrica Pay</span> is
+              your gateway to seamless financial interactions
+            </p>
+            <div className="mt-4">
+              <Button className="bg-[#C63B25] hover:bg-[#A32D21] text-white px-6 py-3 h-auto rounded-lg text-base">
+                Explore
+              </Button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={imageVariants}
+            className="md:w-1/2"
+          >
+            <img
+              src={globeImageUrl || "/placeholder.svg"}
+              alt="Globe visualization"
+              className="w-full h-auto object-contain max-w-[609px] max-h-[525px] mx-auto"
+            />
+          </motion.div>
+        </div>
       </div>
     </div>
   );
