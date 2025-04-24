@@ -142,3 +142,44 @@
     animation-duration: 15s;
   }
 }
+
+/* CUSTOM CSS */
+@font-face {
+  font-family: "InterBold";
+  src: url("../src/assets/fonts/Inter/Inter_18pt-Bold.ttf");
+}
+@font-face {
+  font-family: "InterRegular";
+  src: url("../src/assets/fonts/Inter/Inter_18pt-Regular.ttf");
+}
+@font-face {
+  font-family: "InterMedium";
+  src: url("../src/assets/fonts/Inter/Inter_18pt-Medium.ttf");
+}
+@font-face {
+  font-family: "InterBold";
+  src: url("../src/assets/fonts/Inter/Inter_18pt-Bold.ttf");
+}
+@font-face {
+  font-family: "InterLight";
+  src: url("../src/assets/fonts/Inter/Inter_18pt-Light.ttf");
+}
+@font-face {
+  font-family: "LexendExtraBold";
+  src: url("../src/assets/fonts/Lexend/Lexend-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "LexendLight";
+  src: url("../src/assets/fonts/Lexend/Lexend-Light.ttf");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: LexendExtraBold;
+}
+
+body {
+  font-family: InterMedium;
+}

@@ -116,7 +116,7 @@ const Hero = () => {
           ref={containerRef}
           className="md:w-1/2 z-10 md:mt-[60px] text-center md:text-left"
         >
-          <h1 className="text-white h1 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+          <h1 className="text-white h1 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6 font-[LexendExtraBold]">
             Bridging The Gap, Empowering Transactions
           </h1>
           <p className="text-white text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto md:mx-0">
