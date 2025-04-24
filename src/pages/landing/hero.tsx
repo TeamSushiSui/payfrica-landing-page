@@ -1,6 +1,17 @@
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import axios from "axios";
 import { motion, animate, stagger } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { Loader2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,6 +62,8 @@ const itemVariants = (delay = 0) => ({
 });
 
 const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [isPending, startTransition] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   function splitText(element: HTMLElement) {
@@ -109,12 +122,35 @@ const Hero = () => {
     });
   }, []);
 
+  const joinWaitList = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    startTransition(true);
+    try {
+      await axios.post(
+        "https://payfrica-waitlist-api.vercel.app/api/waitlist/join/",
+        { email }
+      );
+      setEmail("");
+      toast.success(
+        `You have addedd ${email} to our waitlist, we will send you a notification when we launch.`
+      );
+      startTransition(false);
+    } catch (error) {
+      console.log(error);
+      toast.error(
+        "Something went wrong, unable to add your email to our waitlist, Please try again later."
+      );
+    } finally {
+      startTransition(false);
+    }
+  };
+
   return (
     <div className="relative bg-[#F6AD19] pt-24 min-h-[900px] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-16 flex flex-col md:flex-row items-center">
         <div
           ref={containerRef}
-          className="md:w-1/2 z-10 md:mt-[60px] text-center md:text-left"
+          className="md:w-1/2 z-10 text-center md:text-left"
         >
           <h1 className="text-white h1 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6 font-[LexendExtraBold]">
             Bridging The Gap, Empowering Transactions
@@ -133,7 +169,7 @@ const Hero = () => {
               variants={buttonVariants(0.5)}
               className="w-full md:w-fit px-0"
             >
-              <Button className="bg-[#C43E26] text-white px-6 py-3 rounded-md hover:bg-[#A32D21] transition-colors md:w-[250px] w-full h-[59px] sm:w-auto text-base sm:text-lg">
+              <Button className="bg-[#C43E26] text-white px-6 py-3 rounded-md hover:bg-[#A32D21] transition-colors lg:w-[250px] w-full h-[59px] text-base sm:text-lg">
                 Quick Account
               </Button>
             </motion.div>
@@ -144,11 +180,49 @@ const Hero = () => {
             >
               <Button
                 variant="outline"
-                className="border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-[#F6AD19] bg-transparent transition-colors md:w-[250px] h-[59px] w-full sm:w-auto text-base sm:text-lg"
+                className="border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-[#F6AD19] bg-transparent transition-colors lg:w-[250px] h-[59px] w-full text-base sm:text-lg"
               >
                 Sign In
               </Button>
             </motion.div>
+          </motion.div>
+
+          <motion.div className="mt-3">
+            <Card className="bg-[#C63E27] border-[#C63E27] text-white">
+              <CardHeader>
+                <CardTitle className="font-[LexendExtraBold] text-xl sm:text-2xl lg:text-3xl">
+                  Be the first to join the african pay-volution.
+                </CardTitle>
+                <CardDescription className="text-white/80">
+                  Join the Waitlist
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form
+                  action=""
+                  onSubmit={joinWaitList}
+                  className="flex w-full h-[3rem] relative bg-[#facca4] border-[#facca4] rounded-md"
+                >
+                  <Input
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full h-full text-sm placeholder:text-sm"
+                    placeholder="Your email here"
+                  />
+                  <Button
+                    disabled={isPending}
+                    type="submit"
+                    className="absolute right-0 top-0 h-full bg-[#F6AD19] hover:bg-[#F6AD19]/80"
+                  >
+                    {isPending && (
+                      <Loader2 size={19} className="animate-spin" />
+                    )}
+                    Sit First Row
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
 

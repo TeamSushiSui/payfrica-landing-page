@@ -6,10 +6,12 @@ import Hero from "./hero";
 import PayfricaBridge from "./payfrica-brigde";
 import PayFricaCTA from "./payfrica-cta";
 import PayfricaSavings from "./savings";
+import { Toaster } from "@/components/ui/sonner";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen w-screen">
+      <Toaster richColors />
       {/* Navigation */}
       <FixedHeader />
 

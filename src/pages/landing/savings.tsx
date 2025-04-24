@@ -106,12 +106,12 @@ const PayfricaSavings = () => {
           >
             <div className="relative w-full max-w-[500px] mx-auto">
               <motion.div
-                className="absolute -top-6 -left-6 w-24 h-24 bg-[#F7A325] rounded-full opacity-20 blur-lg"
+                className="absolute -top-6 md:-left-6 w-24 h-24 bg-[#F7A325] rounded-full opacity-20 blur-lg"
                 variants={floatingBlobVariants}
               ></motion.div>
 
               <motion.div
-                className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#C4392A] rounded-full opacity-10 blur-xl"
+                className="absolute -bottom-8 md:-right-8 w-32 h-32 bg-[#C4392A] rounded-full opacity-10 blur-xl"
                 variants={floatingBlobVariants}
               ></motion.div>
 
