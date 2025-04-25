@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Marquee } from "@/components/ui/marque";
 import axios from "axios";
 import { motion, animate, stagger } from "framer-motion";
 import { Loader2 } from "lucide-react";
@@ -226,7 +227,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="md:w-1/2 mt-8 px-4 sm:px-8 md:px-0 absolute right-0 md:-mr-[4rem] md:mt-[14rem]">
+        <div className="md:w-1/2 mt-8 px-4 sm:px-8 md:px-0 absolute right-0 lg:-mr-[4rem] md:mt-[14rem]">
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.4 } }}
@@ -238,7 +239,11 @@ const Hero = () => {
       </div>
 
       {/* Campus Badges */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
+
+      <Marquee
+        pauseOnHover
+        className="absolute [--duration:20s] bottom-0 -mb-3 left-0 right-0 overflow-hidden"
+      >
         <motion.div
           variants={container2Variants}
           initial="hidden"
@@ -264,7 +269,7 @@ const Hero = () => {
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </Marquee>
 
       <Stylesheet />
     </div>
