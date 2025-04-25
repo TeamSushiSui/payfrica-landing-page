@@ -117,7 +117,7 @@ const PayfricaSavings = () => {
 
               <motion.div className="relative z-10 rounded-3xl">
                 <img
-                  src="/src/assets/piggy-bank.png"
+                  src="/assets/piggy-bank.png"
                   alt="Piggy Bank Savings"
                   className="rounded-2xl w-full object-cover"
                 />

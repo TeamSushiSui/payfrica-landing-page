@@ -25,18 +25,18 @@ const containerVariants = {
   },
 };
 
-const buttonVariants = (duration = 0.5) => {
-  return {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration,
-      },
-    },
-  };
-};
+// const buttonVariants = (duration = 0.5) => {
+//   return {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         duration,
+//       },
+//     },
+//   };
+// };
 
 const container2Variants = {
   hidden: { opacity: 0 },
@@ -209,7 +209,7 @@ const Hero = () => {
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.4 } }}
-            src="/src/assets/africa-woman-laughing.png"
+            src="/assets/africa-woman-laughing.png"
             alt="Happy African Woman"
             className="md:w-[796px] md:h-[1131px] mt-[14rem] md:mt-[51px]"
           />
@@ -237,7 +237,7 @@ const Hero = () => {
               className="flex items-center gap-3 px-3 sm:px-4 py-2 transform hover:scale-105 transition-transform"
             >
               <img
-                src="/src/assets/sui-logo.png"
+                src="/assets/sui-logo.png"
                 className="md:h-[82.5px] w-[30px] md:w-[60.83333206176758px]"
               />
               <div className="h-[10px] md:py-5 py-3 bg-white border" />

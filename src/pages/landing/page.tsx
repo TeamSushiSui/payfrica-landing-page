@@ -19,7 +19,7 @@ const LandingPage = () => {
       <Hero />
 
       {/* About Section */}
-      <AboutPayfrica globeImageUrl="/src/assets/globe-image.png" />
+      <AboutPayfrica globeImageUrl="/assets/globe-image.png" />
 
       {/* Bridge Section */}
       <PayfricaBridge />

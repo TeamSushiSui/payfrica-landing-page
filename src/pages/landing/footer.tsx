@@ -10,7 +10,7 @@ const Footer = () => {
             <img
               width={170}
               height={61.78715133666992}
-              src="/src/assets/Payfrica-Logo.png"
+              src="/assets/Payfrica-Logo.png"
               alt="Payfrica Logo"
             />
           </div>

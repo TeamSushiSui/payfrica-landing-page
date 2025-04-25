@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+// import payfricaLogo from "@/assets/Payfrica-Logo.png";
+
 
 const FixedHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -124,7 +126,7 @@ const FixedHeader = () => {
             <img
               width={170}
               height={61.78715133666992}
-              src="/src/assets/Payfrica-Logo.png"
+              src="/assets/Payfrica-Logo.png"
               alt="Payfrica Logo"
             />
           </motion.div>
