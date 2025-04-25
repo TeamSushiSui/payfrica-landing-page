@@ -19,7 +19,10 @@ const Footer = () => {
               href="https://x.com/Payfrica_Sui?t=ET4ThnISUDsACFEDrZxyIA&s=09"
               className="hover:text-red-500 transition-colors"
             >
-              <Twitter size={20} />
+              <img
+                src="/public/x-social-media-black-icon.svg"
+                className="size-6 text-white"
+              />
             </a>
           </div>
         </div>

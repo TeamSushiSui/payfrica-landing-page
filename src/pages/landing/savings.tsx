@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { ExploreBtn } from "@/components/explore-btn";
 
 const PayfricaSavings = () => {
   const containerRef = useRef(null);
@@ -88,14 +89,7 @@ const PayfricaSavings = () => {
               Payfrica, Savings Lead To Collective Empowerment
             </motion.p>
 
-            <motion.button
-              className="bg-[#C4392A] text-white px-8 py-3 rounded-md hover:bg-[#A32D21] transition-colors text-lg font-medium"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore
-            </motion.button>
+            <ExploreBtn>Explore</ExploreBtn>
           </motion.div>
 
           <motion.div
@@ -104,7 +98,7 @@ const PayfricaSavings = () => {
             animate={isInView ? "visible" : "hidden"}
             variants={imageContainerVariants}
           >
-            <div className="relative w-full max-w-[500px] mx-auto">
+            <div className="relative w-full md:max-w-[500px] mx-auto">
               <motion.div
                 className="absolute -top-6 md:-left-6 w-24 h-24 bg-[#F7A325] rounded-full opacity-20 blur-lg"
                 variants={floatingBlobVariants}

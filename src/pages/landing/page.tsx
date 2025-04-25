@@ -10,7 +10,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen w-screen">
+    <div className="min-h-screen w-screen overflow-x-hidden">
       <Toaster richColors />
       {/* Navigation */}
       <FixedHeader />

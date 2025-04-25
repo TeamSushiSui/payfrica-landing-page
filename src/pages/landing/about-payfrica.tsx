@@ -1,3 +1,4 @@
+import { ExploreBtn } from "@/components/explore-btn";
 import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -79,13 +80,7 @@ export default function AboutPayfrica({
               <span className="text-[#C63B25] font-bold">Payfrica Pay</span> is
               your gateway to seamless financial interactions
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#C43E26] text-white px-8 py-3 rounded-md hover:bg-[#A32D21] transition-colors w-fit text-lg font-medium"
-            >
-              Explore
-            </motion.button>
+            <ExploreBtn>Explore</ExploreBtn>
           </motion.div>
 
           <motion.div

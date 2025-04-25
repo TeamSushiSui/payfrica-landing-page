@@ -190,8 +190,7 @@ const Hero = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     // className="w-full h-full text-sm placeholder:text-sm"
-                    className="w-full h-full text-sm text-black placeholder:text-sm placeholder:text-black"
-
+                    className="w-full h-full text-sm text-gray-500 placeholder:text-sm placeholder:text-gray-400"
                     placeholder="Your email here"
                   />
                   <Button
@@ -210,12 +209,12 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="md:w-1/2 mt-[11rem] px-4 sm:px-8 md:px-0 absolute right-0 lg:-mr-[4rem] md:mt-[14rem]">
+        <div className="md:w-1/2 px-4 sm:px-8 md:px-0 absolute right-0 lg:-mr-[4rem] md:mt-[14rem]">
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.4 } }}
-            src="/assets/africa-woman-laughing.png"
-            alt="Happy African Woman"
+            src="/public/hero.png"
+            alt="Hero Image"
             className="md:w-[796px] md:h-[1131px] mt-[25rem] md:mt-[51px]"
           />
         </div>

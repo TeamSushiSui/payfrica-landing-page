@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { ExploreBtn } from "@/components/explore-btn";
 
 const PayFricaCTA = () => {
   const containerRef = useRef(null);
@@ -87,14 +88,7 @@ const PayFricaCTA = () => {
                 reading
               </motion.p>
 
-              <motion.button
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, backgroundColor: "#A32D21" }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-[#C4392A] text-white px-8 py-3 rounded-md transition-all duration-300 text-lg font-medium"
-              >
-                Get Started
-              </motion.button>
+              <ExploreBtn>Join Waitlist</ExploreBtn>
             </motion.div>
 
             <motion.div className="md:w-1/2" variants={imageVariants}>

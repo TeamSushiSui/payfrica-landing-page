@@ -1,3 +1,4 @@
+import { ExploreBtn } from "@/components/explore-btn";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -90,14 +91,7 @@ const PayfricaBridge = () => {
               Complexity And Cost
             </motion.p>
 
-            <motion.button
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#C43E26] text-white px-8 py-3 rounded-md hover:bg-[#A32D21] transition-colors text-lg font-medium"
-            >
-              Explore
-            </motion.button>
+            <ExploreBtn> Explore</ExploreBtn>
           </motion.div>
         </div>
       </div>
