@@ -53,7 +53,7 @@ const PayfricaBridge = () => {
           >
             <div className="relative w-full">
               <motion.img
-                src="/src/assets/mobile-image.png"
+                src="/assets/mobile-image.png"
                 alt="Mobile App Interface"
                 className="relative z-10 rounded-3xl transition-transform duration-300"
               />

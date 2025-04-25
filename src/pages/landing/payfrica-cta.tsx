@@ -101,7 +101,7 @@ const PayFricaCTA = () => {
               <div className="flex justify-center items-center gap-4">
                 <motion.div className="z-30 md:absolute md:top-0 mt-9 md:-mt-[7rem]">
                   <img
-                    src="/src/assets/2 Phones.png"
+                    src="/assets/2-Phones.png"
                     alt="Payfrica App Screenshot"
                     className="w-full max-w-[766px] h-auto"
                   />
