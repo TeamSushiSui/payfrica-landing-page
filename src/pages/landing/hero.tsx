@@ -160,35 +160,13 @@ const Hero = () => {
             Seamless Payments, Effortless Savings, And Instant Token Conversions
             Built For Africa, Powered By SUI.
           </p>
+
           <motion.div
+            className="mt-3"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 justify-center md:justify-start"
           >
-            <motion.div
-              variants={buttonVariants(0.5)}
-              className="w-full md:w-fit px-0"
-            >
-              <Button className="bg-[#C43E26] text-white px-6 py-3 rounded-md hover:bg-[#A32D21] transition-colors lg:w-[250px] w-full h-[59px] text-base sm:text-lg">
-                Quick Account
-              </Button>
-            </motion.div>
-
-            <motion.div
-              variants={buttonVariants(0.7)}
-              className="w-full md:w-fit"
-            >
-              <Button
-                variant="outline"
-                className="border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-[#F6AD19] bg-transparent transition-colors lg:w-[250px] h-[59px] w-full text-base sm:text-lg"
-              >
-                Sign In
-              </Button>
-            </motion.div>
-          </motion.div>
-
-          <motion.div className="mt-3">
             <Card className="bg-[#C63E27] border-[#C63E27] text-white">
               <CardHeader>
                 <CardTitle className="font-[LexendExtraBold] text-xl sm:text-2xl lg:text-3xl">

@@ -1,4 +1,4 @@
-import { Twitter, Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Twitter, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -6,18 +6,20 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         {/* Logo and Social Media */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="text-3xl font-bold text-red-500 mb-4 md:mb-0">
-            Payfrica
+          <div className="flex items-center space-x-2">
+            <img
+              width={170}
+              height={61.78715133666992}
+              src="/src/assets/Payfrica-Logo.png"
+              alt="Payfrica Logo"
+            />
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-red-500 transition-colors">
+            <a
+              href="https://x.com/Payfrica_Sui?t=ET4ThnISUDsACFEDrZxyIA&s=09"
+              className="hover:text-red-500 transition-colors"
+            >
               <Twitter size={20} />
-            </a>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              <Facebook size={20} />
-            </a>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              <Instagram size={20} />
             </a>
             <a href="#" className="hover:text-red-500 transition-colors">
               <Linkedin size={20} />
@@ -33,7 +35,7 @@ const Footer = () => {
             href="mailto:feedback@payfrica.com"
             className="ml-2 hover:text-red-500 transition-colors"
           >
-            feedback@payfrica.com
+            payfrica.sui@gmail.com
           </a>
         </div>
 
