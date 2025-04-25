@@ -128,8 +128,11 @@ const Hero = () => {
     startTransition(true);
     try {
       await axios.post(
-        "https://payfrica-waitlist-api.vercel.app/api/waitlist/join/",
-        { email }
+        "/api/waitlist/join/",
+        { email },
+        {
+          withCredentials: true,
+        }
       );
       setEmail("");
       toast.success(
@@ -147,7 +150,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative bg-[#F6AD19] pt-24 min-h-[900px] overflow-hidden">
+    <div className="relative bg-[#F6AD19] pt-24 lg:min-h-[900px] min-h-screen overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-16 flex flex-col md:flex-row items-center">
         <div
           ref={containerRef}
@@ -170,7 +173,7 @@ const Hero = () => {
             <Card className="bg-[#C63E27] border-[#C63E27] text-white">
               <CardHeader>
                 <CardTitle className="font-[LexendExtraBold] text-xl sm:text-2xl lg:text-3xl">
-                  Be the first to join the african pay-volution.
+                  {"Be among the first's to join the African Pay-volution"}
                 </CardTitle>
                 <CardDescription className="text-white/80">
                   Join the Waitlist
@@ -205,7 +208,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="md:w-1/2 mt-8 px-4 sm:px-8 md:px-0 absolute right-0 lg:-mr-[4rem] md:mt-[14rem]">
+        <div className="md:w-1/2 mt-[11rem] px-4 sm:px-8 md:px-0 absolute right-0 lg:-mr-[4rem] md:mt-[14rem]">
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.4 } }}

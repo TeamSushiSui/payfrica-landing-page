@@ -79,11 +79,13 @@ export default function AboutPayfrica({
               <span className="text-[#C63B25] font-bold">Payfrica Pay</span> is
               your gateway to seamless financial interactions
             </p>
-            <div className="mt-4">
-              <Button className="bg-[#C63B25] hover:bg-[#A32D21] text-white px-6 py-3 h-auto rounded-lg text-base">
-                Explore
-              </Button>
-            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#C43E26] text-white px-8 py-3 rounded-md hover:bg-[#A32D21] transition-colors w-fit text-lg font-medium"
+            >
+              Explore
+            </motion.button>
           </motion.div>
 
           <motion.div

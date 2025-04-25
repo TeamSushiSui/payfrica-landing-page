@@ -111,19 +111,21 @@ const FixedHeader = () => {
       initial="initial"
       animate="animate"
       variants={navbarVariants}
-      className={`bg-[#C63E27] w-full fixed left-0 py-4 z-50 top-0 h-[110px] ${
+      className={`bg-[#C63E27] w-full fixed left-0 py-4 z-50 top-0 ${
         scrolled ? "shadow-lg" : ""
       }`}
     >
       <div className="relative w-full">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <motion.div
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 cursor-pointer"
             variants={logoVariants}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <img
               width={170}
               height={61.78715133666992}
+              className="lg:w-[170px] lg:h-[61.8px] w-[140px] h-[50px]"
               src="/src/assets/Payfrica-Logo.png"
               alt="Payfrica Logo"
             />

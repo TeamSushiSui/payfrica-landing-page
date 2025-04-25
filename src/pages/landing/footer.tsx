@@ -21,14 +21,11 @@ const Footer = () => {
             >
               <Twitter size={20} />
             </a>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              <Linkedin size={20} />
-            </a>
           </div>
         </div>
 
         {/* Contact Information */}
-        <div className="flex items-center justify-center mb-6">
+        <div className="flex items-center justify-center mb-6 text-xs md:text-sm">
           <Mail size={16} className="mr-2" />
           <span>Send Your Feedback: </span>
           <a
