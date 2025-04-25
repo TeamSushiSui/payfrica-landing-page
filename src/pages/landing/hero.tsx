@@ -213,7 +213,7 @@ const Hero = () => {
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.4 } }}
-            src="/public/hero.png"
+            src="/assets/hero.png"
             alt="Hero Image"
             className="md:w-[796px] md:h-[1131px] mt-[25rem] md:mt-[51px]"
           />

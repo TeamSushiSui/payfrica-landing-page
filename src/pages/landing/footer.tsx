@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -20,8 +20,22 @@ const Footer = () => {
               className="hover:text-red-500 transition-colors"
             >
               <img
-                src="/public/x-social-media-black-icon.svg"
-                className="size-6 text-white"
+                src="/assets/x-social-media-black-icon.svg"
+                className="size-6"
+                alt="X (Twitter)"
+              />
+            </a>
+
+            <a
+              href="https://t.me/+d908s2sJF_8yNWZk"  // Replace with your actual Telegram link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-colors"
+            >
+              <img
+                src="/assets/telegram-svgrepo-com.svg" // Ensure you have this icon in your assets
+                className="size-6"
+                alt="Telegram"
               />
             </a>
           </div>
