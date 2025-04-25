@@ -186,7 +186,9 @@ const Hero = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full h-full text-sm placeholder:text-sm"
+                    // className="w-full h-full text-sm placeholder:text-sm"
+                    className="w-full h-full text-sm text-black placeholder:text-sm placeholder:text-black"
+
                     placeholder="Your email here"
                   />
                   <Button
@@ -211,7 +213,7 @@ const Hero = () => {
             animate={{ opacity: 1, transition: { delay: 0.4 } }}
             src="/assets/africa-woman-laughing.png"
             alt="Happy African Woman"
-            className="md:w-[796px] md:h-[1131px] mt-[14rem] md:mt-[51px]"
+            className="md:w-[796px] md:h-[1131px] mt-[25rem] md:mt-[51px]"
           />
         </div>
       </div>
