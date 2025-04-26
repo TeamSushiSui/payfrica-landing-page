@@ -25,19 +25,6 @@ const containerVariants = {
   },
 };
 
-// const buttonVariants = (duration = 0.5) => {
-//   return {
-//     hidden: { opacity: 0, y: 20 },
-//     visible: {
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         duration,
-//       },
-//     },
-//   };
-// };
-
 const container2Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -128,11 +115,7 @@ const Hero = () => {
     startTransition(true);
     try {
       await axios.post(
-        "/api/waitlist/join/",
-        { email },
-        {
-          withCredentials: true,
-        }
+        `https://payfrica-waitlist-v1.vercel.app/api/waitlist/join?email=${email}`
       );
       setEmail("");
       toast.success(
