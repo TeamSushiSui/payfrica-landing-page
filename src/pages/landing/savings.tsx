@@ -81,12 +81,12 @@ const PayfricaSavings = () => {
               className="text-gray-700 text-lg mb-8 max-w-xl"
               variants={itemVariants}
             >
-              Join Or Create A{" "}
+              Join or Create a{" "}
               <span className="text-[#F7A325] font-semibold">
                 Savings Circle
               </span>{" "}
-              Where Your Money Is Safe And Your Community Thrives. With
-              Payfrica, Savings Lead To Collective Empowerment
+              Where Your Money is Safe and Your Community Thrives. With
+              Payfrica, Savings Lead to Collective Empowerment
             </motion.p>
 
             <ExploreBtn>Explore</ExploreBtn>

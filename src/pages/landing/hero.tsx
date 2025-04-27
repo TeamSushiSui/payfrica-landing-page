@@ -140,11 +140,11 @@ const Hero = () => {
           className="md:w-1/2 z-10 text-center md:text-left"
         >
           <h1 className="text-white h1 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6 font-[LexendExtraBold]">
-            Bridging The Gap, Empowering Transactions
+            Bridging the Gap, Empowering Transactions
           </h1>
           <p className="text-white text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto md:mx-0">
-            Seamless Payments, Effortless Savings, And Instant Token Conversions
-            Built For Africa, Powered By SUI.
+            Seamless Payments, Effortless Savings, and Instant Token Conversions
+            Built for Africa, Powered By Sui.
           </p>
 
           <motion.div
@@ -156,7 +156,7 @@ const Hero = () => {
             <Card className="bg-[#C63E27] border-[#C63E27] text-white">
               <CardHeader>
                 <CardTitle className="font-[LexendExtraBold] text-xl sm:text-2xl lg:text-3xl">
-                  {"Be among the first's to join the African Pay-volution"}
+                  {"Be among the first to join the African Pay-volution"}
                 </CardTitle>
                 <CardDescription className="text-white/80">
                   Join the Waitlist

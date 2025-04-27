@@ -85,10 +85,10 @@ const PayfricaBridge = () => {
               variants={itemVariants}
               className="text-white/90 text-lg mb-8 max-w-xl"
             >
-              Buy And Convert Tokens With Ease.{" "}
+              Buy and Convert Tokens with Ease.{" "}
               <span className="text-[#F7A325]">Payfrica Bridge</span> Makes
-              Digital Finance Accessible, Breaking Down The Barriers Of
-              Complexity And Cost
+              Digital Finance Accessible, Breaking Down the Barriers of
+              Complexity and Cost
             </motion.p>
 
             <ExploreBtn> Explore</ExploreBtn>
